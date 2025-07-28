@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard – J.K.Jain Test Series</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Sidebar navigation -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <h2>J.K.Jain</h2>
+      <span>Test Series</span>
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="#" id="nav-account" class="active">Account</a></li>
+        <li><a href="#" id="nav-testseries">Test Series Applied</a></li>
+        <li><a href="#" id="nav-logout">Sign Out</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main content area -->
+  <main class="dashboard-main">
+    <!-- Account details section -->
+    <section id="accountSection" class="dashboard-section">
+      <h2>My Account</h2>
+      <div class="account-info">
+        <div class="account-photo">
+          <img id="profileImage" src="" alt="Profile photo" />
+          <input type="file" id="photoInput" accept="image/*" />
+        </div>
+        <div class="account-fields">
+          <p><strong>Full Name:</strong> <span id="accountName"></span></p>
+          <p><strong>Email:</strong> <span id="accountEmail"></span></p>
+          <p><strong>Mobile:</strong> <span id="accountMobile"></span></p>
+          <p><strong>Date of Birth:</strong> <span id="accountDob"></span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Test series section -->
+    <section id="testSeriesSection" class="dashboard-section" style="display:none;">
+      <h2>Test Series Applied</h2>
+      <p id="noTests" style="display:none;">No test papers selected.</p>
+      <table id="testSeriesTable" class="test-table" style="display:none;">
+        <thead>
+          <tr>
+            <th>Paper</th>
+            <th>Question Paper</th>
+            <th>Answer Sheet (Upload)</th>
+            <th>Comments</th>
+          </tr>
+        </thead>
+        <tbody id="testSeriesBody"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-storage-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+  <!-- Dashboard script -->
+  <script src="dashboard.js"></script>
+</body>
+</html>
